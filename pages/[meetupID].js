@@ -35,8 +35,8 @@ export const getStaticPaths = async() => {
 	return {
 		// false => the paths contains all dynamic paths, in case of bad id will generate a 404 page
 		// true => the paths do not contains all dynamic paths, in case of bad id will generate a page with 1st id
-		// With vercel we must set fallback to true for avoid latence or cached bugs...
-		fallback:true,
+		// With vercel we must set fallback to true or 'blocking' for avoid latence or cached bugs...
+		fallback:'blocking',
 		// Paths array
 		paths:meetups.map((meetup) => {
 			return {
