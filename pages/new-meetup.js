@@ -13,7 +13,7 @@ const NewMeetup = () => {
 	// Add new meetup to db
 	const addMeetup = async(meetup) => {
 		// Send request to api/new-meetup
-		const response = await fetch(`http://localhost:3000/api/new-meetup`, {
+		const response = await fetch(`/api/new-meetup`, {
 			method:'POST',
 			body:JSON.stringify(meetup),
 			headers:{
